@@ -33,7 +33,7 @@ def main():
             userIndex = cookies[10:]
             logout = 'http://210.77.16.21/eportal/InterFace.do?method=logout'
             sess.post(logout, {'userIndex': userIndex})
-            print('[LOG] logout')
+            # print('[LOG] logout')
             ret += '[LOG] logout<br>'
             time.sleep(2)
         else:
@@ -54,8 +54,8 @@ def main():
     response = sess.post(login, data=data)
     response.encoding = 'utf-8'
 
-    print('[LOG] server return', response.json()['result'])
-    ret += '[LOG] server return' + response.json()['result'] + '<br>'
+    # print('[LOG] server return', response.json()['result'])
+    ret += '[LOG] server return ' + response.json()['result'] + '<br>'
     return ret
 
 if __name__ == '__main__':
